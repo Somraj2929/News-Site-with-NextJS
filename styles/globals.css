@@ -1,3 +1,8 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -70,6 +75,7 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
+    
   }
 }
 
@@ -87,12 +93,12 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(131,58,180);
+background: -moz-linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 57%, rgba(252,176,69,1) 100%);
+background: -webkit-linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 57%, rgba(252,176,69,1) 100%);
+background: linear-gradient(150deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 57%, rgba(252,176,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+    
 }
 
 a {
@@ -105,3 +111,130 @@ a {
     color-scheme: dark;
   }
 }
+
+.btn-style {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+
+.btn-style:hover {
+  letter-spacing: 0.2rem;
+  padding: 0.6rem 1.5rem;
+  background: #0FF0FC;
+  color: #0FF0FC;
+  /* box-shadow: 0 0 35px #0FF0FC; */
+  animation: box 3s infinite;
+}
+
+.btn-style::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+.btn-style span {
+  position: relative;
+  z-index: 1;
+}
+.btn-style i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.btn-style i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid #0FF0FC;
+  background: #272822;
+  transition: 0.2s;
+}
+
+.btn-style:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.btn-style i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid #0FF0FC;
+  background: #272822;
+  transition: 0.2s;
+}
+
+.btn-style:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px #0FF0FC;
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+
+  
+  @media (min-width: 640px) {
+    .btn-style {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .btn-style {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .btn-style {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      padding: 1rem 2rem;
+    }
+  }
+
