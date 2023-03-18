@@ -56,11 +56,15 @@ export default function SearchBar() {
 
     const handleSearch = async (value) => {
         try {
-            const { data } = await axios.get(`https://newsapi.org/v2/everything?q=${encodeURIComponent(value)}&apiKey=f0d705cdde7f4416a9c6aaa70d662f50`)
+            const { data } = await axios.get(`https://newsapi.org/v2/everything?q=${encodeURIComponent(value)}&apiKey=f0d705cdde7f4416a9c6aaa70d662f50`, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+                }
+            })
             setResults(data.articles)
         } catch (error) {
             console.error(error)
-            setResults([])
+            setResults(["No Match Found"])
         }
     }
 
