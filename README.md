@@ -1,38 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## News Application
 
-First, run the development server:
+  
+
+> This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> 
+<br />
+
+**Getting Starded:-**
+
+To get started, clone this repository and run the following commands:
+
+  
 
 ```bash
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
 ```
 
+  
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
+**Requirements:-**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+> **Make sure to replace API Key with your key.**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Visit [News Api](www.newsapi.org) to get your free API-Key.
+<br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Features:-**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ - Display news articles fetched from API
+ - Consuming external API
+ - Clien-side Sorting and Pagination
+ - News searching ability with Typehead and Debounce
+ - Display news by selecting categories
+ - Sorting of news with different ways.
+<br>
 
-## Learn More
+**Want to Contribute:-**
 
-To learn more about Next.js, take a look at the following resources:
+> Contributions to this project are welcome. To contribute:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ - Fork this repository
+ - Create a new branch:  ***`git checkout -b extra-feature-branch`***
+ - Make your changes and commit them: ***`git commit -am 'Add some feature'`***
+ - Push to the branch: ***`git push origin extra-feature-branch`***
+ - Submit a pull request.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**License**
+This project is licensed under the **MIT License** - see the LICENSE.md file for details.
