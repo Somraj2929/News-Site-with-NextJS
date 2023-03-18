@@ -89,8 +89,8 @@ const NewsArticles = ({ articles }) => {
 
     return (
         <div className="flex flex-wrap">
-            <div className="w-full flex justify-end mb-4">
-                <label htmlFor="sort" className="mr-2">
+            <div className="w-full flex justify-center mb-4 mt-4">
+                <label htmlFor="sort" className="mr-2 text-white font-semibold leading-loose">
                     Sort by:
                 </label>
                 <select
@@ -98,7 +98,9 @@ const NewsArticles = ({ articles }) => {
                     id="sort"
                     value={sortBy}
                     onChange={handleSortChange}
-                    className="border border-grap-300 rounded-md px-3 py-1"
+                    className="border border-grap-300 rounded-md px-3 py-1 font-semibold bg-zinc-100 hover:cursor-pointer"
+                    
+                    
                 >
                     <option value="">--Select--</option>
                     <option value="publishedAt">Published Date</option>

@@ -18,13 +18,16 @@ export default function Home({ articles }){
       </Head>
 
       <div className="container mx-auto">
-        <div className="bg-white h-[70px]  text-center justify-center flex mb-2 relative" >
+        <div className="wavy-bg h-[100px]  text-center justify-center flex  relative" >
           <img 
             src='/mask.png'
             alt="logo"
             className="relative"
           />
           <h1 className="font-bold mt-5">Top News Articles</h1>
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
         </div>
         
         <SearchBar />
@@ -37,7 +40,7 @@ export default function Home({ articles }){
 
 export async function getServerSideProps(){
   try{
-    const { data } = await axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=f0d705cdde7f4416a9c6aaa70d662f50&pageSize=50')
+    const { data } = await axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=faca45ac98004d0b9cbd2efc7f227b27&pageSize=50')
 
     return {
       props: {

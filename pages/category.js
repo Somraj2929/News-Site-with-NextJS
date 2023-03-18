@@ -17,8 +17,16 @@ export default function Category({ articles }) {
       </Head>
 
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold mt-8 mb-4 justify-center text-center text-white">{category.charAt(0).toUpperCase() + category.slice(1)} News</h1>
-        <p className="border-b-8 pt-4"></p>
+        <div className="wavy-bg h-[100px]  text-center justify-center flex  relative">
+        <img 
+            src='/mask.png'
+            alt="logo"
+            className="relative"
+          />
+        <h1 className="font-bold mt-9">{category.charAt(0).toUpperCase() + category.slice(1)} News</h1>
+        </div>
+        
+        <p className="border-b-8 "></p>
         <NewsArticles articles={articles} />
       </div>
     </div>
@@ -30,7 +38,7 @@ export async function getServerSideProps(context) {
     const { category } = context.query;
 
     const { data } = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=f0d705cdde7f4416a9c6aaa70d662f50&pageSize=50`
+      `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=faca45ac98004d0b9cbd2efc7f227b27&pageSize=50`
     );
 
     return {

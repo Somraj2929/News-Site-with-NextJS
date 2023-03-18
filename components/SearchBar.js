@@ -88,11 +88,11 @@ export default function SearchBar() {
                     value={query}
                     onChange={handleInputChange}
                     placeholder="Search for news"
-                    className="border border-gray-400 rounded px-4 py-2 w-full focus:outline-none m-1"
+                    className="border border-gray-400 rounded px-4 py-2 w-full focus:outline-none ml-1 mb-1 "
                 />
                 <button
                     type="submit"
-                    className="bg-green-500 text-white font-semibold rounded rounded-r px-4 py-2 hover:bg-green-600 focus:outline-none m-1"
+                    className="bg-green-500 text-white font-semibold rounded rounded-r px-4 py-2 hover:bg-green-600 focus:outline-none ml-1 mb-1 mr-1"
                 >
                     Search
                 </button>

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import NewsArticles from '../components/NewsArticles'
 
+
 export default function Search({ articles }) {
     const router = useRouter()
     const { q } = router.query
@@ -17,8 +18,19 @@ export default function Search({ articles }) {
             </Head>
 
             <div className="container mx-auto">
-                <h1 className="text-4x1 font-bold mt-8 mb-4 justify-center text-center text-white">Search Results for "{q}" </h1>
-                <p className="border-b-8 pt-4"></p>
+                <div className="wavy-bg h-[100px]  text-center justify-center flex  relative">
+                <img 
+                    src='/mask.png'
+                    alt="logo"
+                    className="relative"
+                />
+                    <h1 className="font-bold mt-9">Search Results for "{q}" </h1>
+                    <div className="wavy" />
+                    <div className="wavy" />
+                    <div className="wavy" />
+                </div>
+                <p className="border-b-8 "></p>
+                
                 <NewsArticles articles={articles} />
             </div>
         </div>
@@ -30,7 +42,7 @@ export async function getServerSideProps({ query }) {
         const { q } = query
         const { data } = await axios.get(`https://newsapi.org/v2/everything?q=${encodeURIComponent(
             q
-          )}&apiKey=f0d705cdde7f4416a9c6aaa70d662f50&pageSize=50`
+          )}&apiKey=faca45ac98004d0b9cbd2efc7f227b27&pageSize=50`
         )
 
         return {
