@@ -64,7 +64,7 @@ export default function SearchBar() {
             setResults(data.articles)
         } catch (error) {
             console.error(error)
-            setResults(["No Match Found"])
+            setResults([])
         }
     }
 
