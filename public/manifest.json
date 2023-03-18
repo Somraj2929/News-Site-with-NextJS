@@ -3,7 +3,7 @@
     "short_name": "News App",
     "icons": [
       {
-        "src": "/public/mask.png",
+        "src": "mask.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "maskable any"
