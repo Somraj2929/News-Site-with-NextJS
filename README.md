@@ -24,12 +24,15 @@ npm run dev
   
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 <br>
+
 **Requirements:-**
 
 > **Make sure to replace API Key with your key.**
 
 Visit [News Api](www.newsapi.org) to get your free API-Key.
+<br>
 <br>
 
 **Features:-**
