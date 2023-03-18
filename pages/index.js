@@ -24,7 +24,7 @@ export default function Home({ articles }){
             alt="logo"
             className="relative"
           />
-          <h1 className="font-bold mt-5">Top News Articles</h1>
+          <h1 className="font-bold mt-9">Top News Articles</h1>
           <div className="wave"></div>
           <div className="wave"></div>
           <div className="wave"></div>

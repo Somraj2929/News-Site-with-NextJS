@@ -33,6 +33,10 @@
 //     )
 // }
 
+// import { Typeahead } from 'react-bootstrap-typeahead';
+// import 'react-bootstrap-typeahead/css/Typeahead.css';
+
+
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
@@ -90,6 +94,19 @@ export default function SearchBar() {
                     placeholder="Search for news"
                     className="border border-gray-400 rounded px-4 py-2 w-full focus:outline-none ml-1 mb-1 "
                 />
+                {/* <Typeahead
+                    id="search-bar"
+                    options={results}
+                    labelKey="title"
+                    placeholder="Search for news"
+                    onChange={(selected) => {
+                        if (selected[0]) {
+                            router.push(`/search?q=${encodeURIComponent(selected[0].title)}`);
+                            setQuery('');
+                        }
+                    }}
+                /> */}
+
                 <button
                     type="submit"
                     className="bg-green-500 text-white font-semibold rounded rounded-r px-4 py-2 hover:bg-green-600 focus:outline-none ml-1 mb-1 mr-1"
