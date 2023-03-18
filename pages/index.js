@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import axios from 'axios'
-import NewsArticles from '@/components/newsarticles'
-import SearchBar from '@/components/SearchBar'
-import CategoryMenu from '@/components/CategoryMenu'
+import NewsArticles from '../components/NewsArticles'
+import SearchBar from '../components/SearchBar'
+import CategoryMenu from '../components/CategoryMenu'
 
 
 
