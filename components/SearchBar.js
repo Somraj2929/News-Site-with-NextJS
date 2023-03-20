@@ -97,14 +97,11 @@ export default function SearchBar() {
                 {/* <Typeahead
                     id="search-bar"
                     options={results}
+                    value={query}
                     labelKey="title"
                     placeholder="Search for news"
-                    onChange={(selected) => {
-                        if (selected[0]) {
-                            router.push(`/search?q=${encodeURIComponent(selected[0].title)}`);
-                            setQuery('');
-                        }
-                    }}
+                    onChange={handleInputChange}
+                    
                 /> */}
 
                 <button
