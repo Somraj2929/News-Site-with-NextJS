@@ -118,9 +118,9 @@ const NewsArticles = ({ articles }) => {
                                 alt={article.title}
                             />
                             <div className="p-4">
-                                <h2  className="text-lg font-bold mb-2 sm:text-black md:text-black lg:text-black">{article.title}</h2>
-                                <p className="text-sm sm:text-grey-700 md:text-grey-700 text-grey-700">{article.description}</p>
-                                <p className="text-sm text-gray-500 mt-2">
+                                <h2  className="text-lg font-bold mb-2 text-black">{article.title}</h2>
+                                <p className="text-sm text-black">{article.description}</p>
+                                <p className="text-sm text-black mt-2">
                                     {new Date(article.publishedAt).toLocaleDateString('en-US', {
                                         year: 'numeric',
                                         month: 'long',
