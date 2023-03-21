@@ -120,7 +120,7 @@ const NewsArticles = ({ articles }) => {
                             <div className="p-4">
                                 <h2  className="text-lg font-bold mb-2 text-black">{article.title}</h2>
                                 <p className="text-sm text-black">{article.description}</p>
-                                <p className="text-sm text-black mt-2">
+                                <p className="text-sm text-gray-500 mt-2">
                                     {new Date(article.publishedAt).toLocaleDateString('en-US', {
                                         year: 'numeric',
                                         month: 'long',
