@@ -137,7 +137,7 @@ const NewsArticles = ({ articles }) => {
                 <button 
                     onClick={handlePrevPageClick}
                     disabled={page === 1}
-                    className="bg-gray-200 hover:bg-gray-400 text-grey-700 font-semibold py-2 px-4 rounded-1"
+                    className="bg-white hover:bg-gray-200 text-black font-semibold py-2 px-4 rounded-l"
                 >
                     Prev
                 </button>
