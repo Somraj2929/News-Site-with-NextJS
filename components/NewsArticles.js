@@ -88,7 +88,7 @@ const NewsArticles = ({ articles }) => {
     };
 
     return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap mx-auto">
             <div className="w-full flex justify-center mb-4 mt-4">
                 <label htmlFor="sort" className="mr-2 text-white font-semibold leading-loose">
                     Sort by:
@@ -98,7 +98,7 @@ const NewsArticles = ({ articles }) => {
                     id="sort"
                     value={sortBy}
                     onChange={handleSortChange}
-                    className="border border-grap-300 rounded-md px-3 py-1 font-semibold bg-zinc-100 hover:cursor-pointer"
+                    className="border text-black border-gray-300 rounded-md px-3 py-1 font-semibold sm:bg-zinc-100 md:bg-zinc-100 lg:bg-zinc-100 bg-zinc-100 hover:cursor-pointer"
                     
                     
                 >
@@ -109,7 +109,7 @@ const NewsArticles = ({ articles }) => {
                 </select>
             </div>
             {visibleArticles.map((article) => (
-                <div key={article.url} className="w-full  md:w-1/2 lg:w-1/3 p-4">
+                <div key={article.url} className="w-full sm-w-full  md:w-1/2 lg:w-1/3 p-4">
                     <a href={article.url} target="_blank" rel="noopener noreferrer">
                         <div className="bg-white shadow-md  hover:shadow-2xl rounded-lg overflow-hidden">
                             <img
@@ -118,8 +118,8 @@ const NewsArticles = ({ articles }) => {
                                 alt={article.title}
                             />
                             <div className="p-4">
-                                <h2  className="text-lg font-bold mb-2">{article.title}</h2>
-                                <p className="text-sm text-grey-700">{article.description}</p>
+                                <h2  className="text-lg font-bold mb-2 sm:text-black md:text-black lg:text-black">{article.title}</h2>
+                                <p className="text-sm sm:text-grey-700 md:text-grey-700 text-grey-700">{article.description}</p>
                                 <p className="text-sm text-gray-500 mt-2">
                                     {new Date(article.publishedAt).toLocaleDateString('en-US', {
                                         year: 'numeric',
